@@ -15,7 +15,7 @@ This automation uses Azure Logic Apps to:
 - **Incident Analysis:** Fetches detailed incident information from Sentinel.
 - **SOAP Note Generation:** Uses Azure OpenAI to create structured SOAP notes based on incident data.
 - **Automated Documentation:** Comments the SOAP notes back to the Sentinel incident for easy reference.
-- **Error Handling:** Incorporates robust error handling to ensure smooth operation.
+- **Error Handling:**
 
 ---
 
@@ -28,7 +28,7 @@ This automation uses Azure Logic Apps to:
 - The Azure Logic App must have permission to:
   - Access Microsoft Sentinel incidents.
   - Use the Azure OpenAI endpoint.
-  - Write comments back to Sentinel incidents (if applicable).
+  - Write comments back to Sentinel incidents
 
 ---
 
@@ -70,22 +70,6 @@ This automation uses Azure Logic Apps to:
   - Ensure the schema matches the actual OpenAI response.
 - **Add Comment Action:**
   - Configure the connection to your Sentinel workspace.
-
----
-
-## Error Handling
-### Common Issues
-1. **401 Unauthorized:**
-   - Ensure the API key is valid and included as a `Bearer` token in the header.
-2. **400 Bad Request:**
-   - Check the prompt structure and ensure all required incident fields are included.
-3. **Invalid JSON Schema:**
-   - Validate the schema against the raw response from Azure OpenAI.
-
----
-
-## Contribution
-Pull requests and issues are welcome! Please ensure changes are well-tested and documented.
 
 ---
 
